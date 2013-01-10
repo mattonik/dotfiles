@@ -1,0 +1,42 @@
+# Easier navigation: .., ...
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+
+# programs
+alias st='open -a "Sublime Text 2"'
+alias tw='open =a "TextWrangler"'
+
+alias work="cd ~/Dropbox/Work/"
+
+# List all files colorized in long format
+alias l="ls -lG"
+
+# List all files colorized in long format, including dot files
+alias la="ls -laG"
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# Always use color output for `ls`
+alias ls="command ls -G"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# Enhanced WHOIS lookups
+alias whois="whois -h whois-servers.net"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
+
+# File size
+alias fs="stat -f \"%z bytes\""
+
+# Empty the Trash on all mounted volumes and the main HDD
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
+
+# Renew .bash_profile
+alias renew="source ~/.bash_profile"
